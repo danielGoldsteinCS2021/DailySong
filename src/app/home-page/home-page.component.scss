@@ -1,0 +1,8 @@
+h2{
+    text-align: center;
+}
+
+button{
+    position: relative;
+    left: 45%; // seems that 50% pushes it too far to the right as button length isn't factored in
+}
