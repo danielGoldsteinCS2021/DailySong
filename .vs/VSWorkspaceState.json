@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\details-page",
     "\\src\\app\\home-page"
   ],
-  "SelectedNode": "\\src\\app\\app.component.html",
+  "SelectedNode": "\\src\\app\\details-page\\details-page.component.html",
   "PreviewInSolutionExplorer": false
 }
