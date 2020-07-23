@@ -1,8 +1,11 @@
-h2{
-    text-align: center;
+#siteName{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3rem;
 }
 
-button{
-    position: relative;
-    left: 45%; // seems that 50% pushes it too far to the right as button length isn't factored in
+.buttonRowItem{
+  margin: 0.5rem;
+  font-size: 1.5rem !important;
 }
+
+
