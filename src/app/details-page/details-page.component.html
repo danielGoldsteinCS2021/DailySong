@@ -1,18 +1,19 @@
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
 
-  <div>
-    <button nbButton outline status="warning" [routerLink]="'/home'">Home</button>
-    <ul>
-      <li>
-        <h1>Your Song</h1>
-        <!-- title artist year web url !-->
-        <h2>Title: {{ null }}</h2>
-        <h2>Artist: {{ null }}</h2>
-        <h2>Year: {{ null }}</h2>
-      </li>
-      <li id="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                frameborder="0" allow="accelerometer; autoplay; encrypted-media;
-                gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </li>
-    </ul>
-  </div>
+<div>
+  <h4 id="siteName">Daily Song!</h4>
+  <button id="homebutton" size="giant" nbButton outline status="warning" [routerLink]="'/'">Home</button>
+</div>
+
+<div id="iframe-container">
+  <iframe width="560" height="315" [src]="youtubeURl(webUrl)" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+</div>
+
+<div id="songinfo">
+  <h1>Title - {{ title }}</h1>
+  <h1>Artist - {{ artist }}</h1>
+  <h1>Year - {{ year }}</h1>
+</div>

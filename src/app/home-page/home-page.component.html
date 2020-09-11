@@ -5,52 +5,14 @@
 </h4>
 
 <div id="buttonGrid">
-  <div class="buttonRowContainer">
-    <button class="buttonRowItem" size="giant" nbButton outline status="success" (click)="generateClicked()">Pop</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="success" (click)="generateClicked()">Rock</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="success" (click)="generateClicked()">Hip-Hop</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="success" (click)="generateClicked()">Dance</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="success" (click)="generateClicked()">Country</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="success" (click)="generateClicked()">Indie</button>
-  </div>
-  <div class="buttonRowContainer">
-    <button class="buttonRowItem" size="giant" nbButton outline status="info" (click)="generateClicked()">60's</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="info" (click)="generateClicked()">70's</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="info" (click)="generateClicked()">80's</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="info" (click)="generateClicked()">90's</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="info" (click)="generateClicked()">00's</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="info" (click)="generateClicked()">10's</button>
-  </div>
-  <div class="buttonRowContainer">
-    <button class="buttonRowItem" size="giant" nbButton outline status="danger" (click)="generateClicked()">Happy</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="danger" (click)="generateClicked()">Hyped</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="danger" (click)="generateClicked()">Sad</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="danger" (click)="generateClicked()">Nervous</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="danger" (click)="generateClicked()">Relaxed</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="danger" (click)="generateClicked()">Joyed</button>
-  </div>
-  <div class="buttonRowContainer">
-    <button class="buttonRowItem" size="giant" nbButton outline status="warning" (click)="generateClicked()">Walking</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="warning" (click)="generateClicked()">Jogging</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="warning" (click)="generateClicked()">Lifting</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="warning" (click)="generateClicked()">Dancing</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="warning" (click)="generateClicked()">Jumping</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="warning" (click)="generateClicked()">Biking</button>
-  </div>
-  <div class="buttonRowContainer">
-    <button class="buttonRowItem" size="giant" nbButton outline status="primary" (click)="generateClicked()">Sunny</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="primary" (click)="generateClicked()">Rainy</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="primary" (click)="generateClicked()">Windy</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="primary" (click)="generateClicked()">Snowy</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="primary" (click)="generateClicked()">Thunder</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="primary" (click)="generateClicked()">Tornado</button>
-  </div>
-  <div class="buttonRowContainer">
-    <button class="buttonRowItem" size="giant" nbButton outline status="basic" (click)="generateClicked()">Breakfast</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="basic" (click)="generateClicked()">Brunch</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="basic" (click)="generateClicked()">Lunch</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="basic" (click)="generateClicked()">Snack</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="basic" (click)="generateClicked()">Dinner</button>
-    <button class="buttonRowItem" size="giant" nbButton outline status="basic" (click)="generateClicked()">Dessert</button>
+  <div *ngFor="let songRowType of allSongRows">
+    <span *ngFor="let song of songRowType" class="buttonRowContainer">
+      <button *ngIf="songRowType === genreRow" class="buttonRowItem" size="giant" nbButton outline status="success" (click)="generateClicked(song)">{{ song }}</button>
+      <button *ngIf="songRowType === yearRow" class="buttonRowItem" size="giant" nbButton outline status="info" (click)="generateClicked(song)">{{ song }}</button>
+      <button *ngIf="songRowType === moodRow" class="buttonRowItem" size="giant" nbButton outline status="danger" (click)="generateClicked(song)">{{ song }}</button>
+      <button *ngIf="songRowType === movementRow" class="buttonRowItem" size="giant" nbButton outline status="warning" (click)="generateClicked(song)">{{ song }}</button>
+      <button *ngIf="songRowType === weatherRow" class="buttonRowItem" size="giant" nbButton outline status="primary" (click)="generateClicked(song)">{{ song }}</button>
+      <button *ngIf="songRowType === mealRow" class="buttonRowItem" size="giant" nbButton outline status="basic" (click)="generateClicked(song)">{{ song }}</button>
+    </span>
   </div>
 </div>

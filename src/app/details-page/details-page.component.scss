@@ -1,16 +1,25 @@
-// add animations for h2 tag if there is time
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+#siteName{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3rem;
 }
 
-li {
-  float: left;
-  padding: 4rem;
+#homebutton{
+  margin: 0.5rem;
+  font-size: 1.5rem !important;
+  width: 11%;
 }
 
-#video{
-    margin-top: 4%;
+#songinfo h1{
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+}
+
+#iframe-container{
+  position: relative;
+}
+
+#iframe-container iframe{
+  position: absolute;
+  left: 47%;
 }
