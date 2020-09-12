@@ -28,10 +28,9 @@ export class HomePageComponent implements OnInit {
 
   }
 
-  generateClicked(genre: string = 'pop') {
+  generateClicked(genre: string) {
     this.http.get(this.backendUrl + genre.toLowerCase()).toPromise().
     then((songObj: {'_id', 'title': string, 'artist': string, 'year': string, web_url: string, 'genre': string}) => {
-      console.log(songObj);
       HomePageComponent.song = songObj;
       this.router.navigateByUrl('/details');
      });

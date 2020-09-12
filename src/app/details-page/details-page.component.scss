@@ -13,6 +13,8 @@
   margin-bottom: 1rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 3rem;
+  word-wrap: break-word;
+  width: 40%;
 }
 
 #iframe-container{
@@ -21,5 +23,5 @@
 
 #iframe-container iframe{
   position: absolute;
-  left: 47%;
+  left: 40%;
 }
